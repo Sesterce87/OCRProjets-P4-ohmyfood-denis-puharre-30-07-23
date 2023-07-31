@@ -1,0 +1,41 @@
+$primary-color: #9556DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+
+$logo-title-font: 'Shrikhand', cursive;
+$texts-font: 'Roboto', sans-serif;
+
+* {
+    font-family: $texts-font;
+}
+
+h1, h4 {
+    font-family: $logo-title-font;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__img {
+        margin: 0.9rem 0 0.9rem 0;
+    }
+}
+
+.location {
+    &__link {
+        text-decoration: none;
+        color: #353535;
+    }
+}
+
+footer {
+    background-color: #353535;
+    color: #ffffff;
+    padding: 0.8rem 0 1rem 0;
+    .infoslinks {
+        &__title {
+            font-size: 1.1rem;
+        }
+    }
+}
