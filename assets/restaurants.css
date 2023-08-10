@@ -16,7 +16,6 @@ body {
 }
 body header .navbar {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   gap: 60px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
@@ -35,7 +34,6 @@ body header .presentation {
 }
 body main {
   position: relative;
-  width: 100%;
   height: 1650px;
   padding: 1.4rem 1.2rem 1.4rem 1.2rem;
   background-color: #F6F6F6;
@@ -43,10 +41,7 @@ body main {
 }
 body main .maincontainer {
   position: absolute;
-  width: 100%;
-  top: -50px;
-  padding: 1.4rem 1.2rem 1.4rem 1.2rem;
-  background-color: #F6F6F6;
+  top: -60px;
   border-radius: 25px 25px 0 0;
 }
 body main .maincontainer .menu__title {
@@ -58,7 +53,6 @@ body main .maincontainer .menu .card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.2rem;
   font-weight: 500;
   padding: 11px 0 11px 0;
   margin-bottom: 1.5rem;
