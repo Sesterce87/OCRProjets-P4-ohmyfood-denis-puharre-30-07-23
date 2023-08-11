@@ -25,69 +25,97 @@ body {
     header {
         .navbar {
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 60px;
-            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
             & a {
-                padding: 0 0 0 17px;
+                position: absolute;
+                left: 5%;
             }
             & img {
-                margin: 0.9rem 0 0.9rem 0;
+                margin: 0.9em 0 0.9em 0;
             }
         }
         .presentation {
             width: 100%;
-            height: 275px;
-            object-fit: cover;
+            height: 225px;
+            img {
+                width: 100%;
+                height: 275px;
+                object-fit: cover;
+                position: absolute;
+                z-index: 1;
+            }
         }
     }
 
     main {
         position: relative;
-        height: 1650px;
-        padding: 1.4rem 1.2rem 1.4rem 1.2rem;
+        z-index: 2;
+        padding: 1.2em 1em 1.2em 1em;
         background-color: #F6F6F6;
         border-radius: 25px 25px 0 0;
-        .maincontainer {
-            position: absolute;
-            top: -60px;
-            border-radius: 25px 25px 0 0;
-            .menu {
-                &__title {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-                .card {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-weight: 500;
-                    padding: 11px 0 11px 0;
-                    margin-bottom: 1.5rem;
-                    border-radius: 15px;
-                    box-shadow: 0px 4px 15px 0px #00000026;
+        .menu__title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h1 {
+                font-size: 1.8em;
+                font-weight: 400;
+            }
+            i {
+                padding: 0 1em 0 1em;
+            }
+        }
+        .course {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            margin-bottom: 1.5em;
+            .underline {
+                position: relative;
+                display: inline-block;
+                padding-bottom: 10px;
+            }
+            .underline::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 40px;
+                height: 3px;
+                background-color: $tertiary-color;
+            }
+            .card {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 500;
+                padding: 1em;
+                border-radius: 15px;
+                box-shadow: 0px 4px 15px 0px #00000026;
+                h3, p {
+                    margin: 0;
                 }
             }
-            .validation {
-                display: flex;
-                justify-content: center;
-                &__btn {
-                    text-decoration: none;
-                    text-align: center;
-                    color: #ffffff;
-                    display:inline-block;
-                    width: 218px;
-                    font-weight: 500;
-                    background: $linear-gradient;
-                    border-radius: 25px;
-                    padding: 16px 0 16px 0;
-                    margin-top: 1rem;
-                    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-                    transition: all 1s cubic-bezier(.3,.01,.81,.75);
-                    &:hover {
-                        background: $brighter-gradient;
-                    }
+        }
+        .validation {
+            display: flex;
+            justify-content: center;
+            &__btn {
+                text-decoration: none;
+                text-align: center;
+                color: #ffffff;
+                display:inline-block;
+                width: 218px;
+                font-weight: 500;
+                background: $linear-gradient;
+                border-radius: 25px;
+                padding: 16px 0 16px 0;                    
+                margin-top: 1rem;
+                box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+                transition: all 1s cubic-bezier(.3,.01,.81,.75);
+                &:hover {
+                    background: $brighter-gradient;
                 }
             }
         }    
