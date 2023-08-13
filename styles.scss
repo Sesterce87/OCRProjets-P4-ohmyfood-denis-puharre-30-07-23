@@ -24,20 +24,57 @@ a {
     color: initial;
 }
 
-// .loader {
-//     border: 3px solid #99E2D0;
-//     border-top: 3px solid #003A68;
-//     border-radius: 50%;
-//     width: 40px;
-//     height: 40px;
-//     animation: spin 2s linear infinite;
-//     margin: 100px auto;
-// }
-  
-//   @keyframes spin {
-//     0% { transform: rotate(0deg); }
-//     100% { transform: rotate(360deg); }
-// }
+.loader-container {
+    position: absolute;
+    z-index: 2;
+    background: #EAEAEA;
+    border-radius: 8%;
+    opacity: 0.9;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: out 4s forwards;
+    transform-origin: right;
+
+    @keyframes out {
+        0% {
+            transform:scale(1);
+        }
+        100% {
+            transform:scale(0);
+        }
+    }
+
+    .utensils {
+        width: 50px;
+        height: 50px;
+        margin: 0 16px;
+        animation: loader infinite 0.3s alternate;
+    }
+    .u1 {
+        color: #008766;
+    }
+    .u2 {
+        color: #89C8FA;
+        animation-delay: 0.05s;
+    }
+    .u3 {
+        color: #003A68;
+        animation-delay: 0.1s;
+    }
+    .u4 {
+        color: #9356DC;
+        animation-delay: 0.15s;
+    }
+
+    @keyframes loader {
+        100% {
+            transform: translateY(-30px);
+        }
+    }
+}
 
 .navbar {
     display: flex;
@@ -178,10 +215,16 @@ a {
                 position: relative;
                 .likeempty {
                     position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                 }
-                .likefull {
-                    position: absolute;
-                }
+                // .likefull {
+                //     position: absolute;
+                //     top: 50%;
+                //     left: 50%;
+                //     transform: translate(-50%, -50%);
+                // }
             }
         }
     }

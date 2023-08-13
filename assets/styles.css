@@ -15,6 +15,55 @@ a {
   color: initial;
 }
 
+.loader-container {
+  position: absolute;
+  z-index: 2;
+  background: #EAEAEA;
+  border-radius: 8%;
+  opacity: 0.9;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: out 4s forwards;
+  transform-origin: right;
+}
+@keyframes out {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.loader-container .utensils {
+  width: 50px;
+  height: 50px;
+  margin: 0 16px;
+  animation: loader infinite 0.3s alternate;
+}
+.loader-container .u1 {
+  color: #008766;
+}
+.loader-container .u2 {
+  color: #89C8FA;
+  animation-delay: 0.05s;
+}
+.loader-container .u3 {
+  color: #003A68;
+  animation-delay: 0.1s;
+}
+.loader-container .u4 {
+  color: #9356DC;
+  animation-delay: 0.15s;
+}
+@keyframes loader {
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
 .navbar {
   display: flex;
   justify-content: center;
@@ -159,9 +208,9 @@ a {
 }
 .restaurants .restaurants-card__content--like .likeempty {
   position: absolute;
-}
-.restaurants .restaurants-card__content--like .likefull {
-  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 footer {
