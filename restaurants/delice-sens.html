@@ -3,26 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="stylesheet" href="../assets/restaurants.css">
     <title>OhMyFood!</title>
 </head>
 
 <body>
     <header>
-        <nav>
-            <h1>Oh my food</h1>
+        <nav class="navbar">
+            <a href="../index.html"><i class="fa-solid fa-arrow-left fa-lg"></i></a>
+            <img src="../assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood" />
         </nav>
+        <div class="presentation">
+            <img src="../assets/images/restaurants/louis-hansel-ledelicedessens.jpg" alt="assiette avec exemple de menu" />
+        </div>
     </header>
     <main>
         <section>
-
+            <div class="menu__title">
+                <h1>Le délice des sens</h1>
+                <i class="fa-regular fa-heart fa-xl"></i>
+            </div>
+            <article class="course">
+                <p class="underline">ENTREES</p>
+                <div class="card">
+                    <div>
+                        <h3 class="card__title">Tartare de thon</h3>
+                        <p class="card__text">Assaisonné au yuzu</p>
+                    </div>
+                    <p class="card__price">25€</p>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3 class="card__title">Bouchée de homard croustillant</h3>
+                        <p class="card__text">Et sa farandole de petits légumes</p>
+                    </div>
+                    <p class="card__price">35€</p>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3 class="card__title">Poulet rôti aux herbes de Provence</h3>
+                        <p class="card__text">Et sa crème de truffe</p>
+                    </div>
+                    <p class="card__price">40€</p>
+                </div>
+            </article>
+            <article class="course">
+                <p class="underline">PLATS</p>
+                <div class="card">
+                    <div>
+                        <h3 class="card__title">Poulet rôti aux herbes de Provence</h3>
+                        <p class="card__text">Et sa crème de truffe</p>
+                    </div>
+                    <p class="card__price">40€</p>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3 class="card__title">Langoustine rôtie</h3>
+                        <p class="card__text">Et ses légumes de saison</p>
+                    </div>
+                    <p class="card__price">35€</p>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3 class="card__title">Côte de boeuf Angus</h3>
+                        <p class="card__text">Et sa purée de panais</p>
+                    </div>
+                    <p class="card__price">44€</p>
+                </div>
+            </article>
+            <article class="course">
+                <p class="underline">DESSERTS</p>
+                <div class="card">
+                    <div>
+                        <h3 class="card__title">Oeuf au plat</h3>
+                        <p class="card__text">Assaisonné à la truffe sur lit de caviar</p>
+                    </div>
+                    <p class="card__price">76€</p>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3 class="card__title">Crème brulée</h3>
+                        <p class="card__text">Revisitée</p>
+                    </div>
+                    <p class="card__price">22€</p>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3 class="card__title">Tiramisu</h3>
+                        <p class="card__text">A la noisette</p>
+                    </div>
+                    <p class="card__price">23€</p>
+                </div>
+            </article>
         </section>
+        <section class="validation">
+            <a class="validation__btn" href="#">Commander</a>
+        </section>  
     </main>
     <footer>
-
+<!--zone infos links-->        
+        <section class="infoslinks">
+            <h4 class="infoslinks__title">ohmyfood</h4>
+            <p class="infoslinks__txt"><a href="#"><img src="../assets/images/icon/fork.svg" alt="icône couverts" /> Proposer un restaurant</a></p>
+            <p class="infoslinks__txt"><a href="#"><img src="../assets/images/icon/hands.svg" alt="icône mains serrées" /> Devenir partenaire</a></p>
+            <p><a href="#">Mentions légales</a></p>
+            <p><a href="mailto:ohmyfood@example.com">Contact</a></p>
+        </section>
     </footer>
 </body>
 </html>

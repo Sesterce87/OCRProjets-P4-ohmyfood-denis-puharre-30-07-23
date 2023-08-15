@@ -26,7 +26,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: out 4s forwards;
+  animation: out 3s forwards;
   transform-origin: right;
 }
 @keyframes out {
