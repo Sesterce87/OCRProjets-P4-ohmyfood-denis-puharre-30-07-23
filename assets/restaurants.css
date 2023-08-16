@@ -48,6 +48,7 @@ body main {
 @media (min-width: 769px) {
   body main {
     margin: 0 8em 0 8em;
+    padding: 1.2em 6em 2em 6em;
   }
 }
 body main .menu__title {
@@ -67,18 +68,63 @@ body main .menu__title h1 {
 body main .menu__title i {
   padding: 0 1em 0 1em;
 }
-body main .course {
+body main .coursefirst {
+  opacity: 0;
+  animation: loadingdelay 1s ease 1s forwards;
+}
+@keyframes loadingdelay {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body main .coursesecond {
+  opacity: 0;
+  animation: loadingdelay 1s ease 2s forwards;
+}
+@keyframes loadingdelay {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body main .coursethird {
+  opacity: 0;
+  animation: loadingdelay 1s ease 3s forwards;
+}
+@keyframes loadingdelay {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body main .coursefirst, body main .coursesecond, body main .coursethird {
   display: flex;
   flex-direction: column;
   gap: 1em;
   margin-bottom: 1.5em;
 }
-body main .course .underline {
+body main .coursefirst .underline, body main .coursesecond .underline, body main .coursethird .underline {
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
 }
-body main .course .underline::after {
+body main .coursefirst .underline::after, body main .coursesecond .underline::after, body main .coursethird .underline::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -87,7 +133,7 @@ body main .course .underline::after {
   height: 3px;
   background-color: #99E2D0;
 }
-body main .course .card {
+body main .coursefirst .card, body main .coursesecond .card, body main .coursethird .card {
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -95,17 +141,17 @@ body main .course .card {
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
 }
-body main .course .card__title {
+body main .coursefirst .card__title, body main .coursesecond .card__title, body main .coursethird .card__title {
   margin: 0.5em 0 0 0.5em;
   font-size: 1.1em;
   font-weight: 600;
 }
-body main .course .card__text {
+body main .coursefirst .card__text, body main .coursesecond .card__text, body main .coursethird .card__text {
   margin: 0.4em 0 0.5em 0.5em;
   font-size: 0.9em;
   font-weight: 300;
 }
-body main .course .card__price {
+body main .coursefirst .card__price, body main .coursesecond .card__price, body main .coursethird .card__price {
   margin: 0.5em 0.6em 0.5em 0.5em;
   font-size: 0.9em;
   font-weight: 700;

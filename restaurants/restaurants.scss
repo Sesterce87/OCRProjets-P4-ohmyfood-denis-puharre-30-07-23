@@ -57,6 +57,7 @@ body {
 
         @media (min-width: 769px) {
             margin: 0 8em 0 8em;
+            padding: 1.2em 6em 2em 6em;
         }
         .menu__title {
             display: flex;
@@ -74,7 +75,55 @@ body {
                 padding: 0 1em 0 1em;
             }
         }
-        .course {
+        .coursefirst {
+            opacity: 0;
+            animation: loadingdelay 1s ease 1s forwards;
+
+            @keyframes loadingdelay {
+                0% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 0.5;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+        .coursesecond {
+            opacity: 0;
+            animation: loadingdelay 1s ease 2s forwards;
+
+            @keyframes loadingdelay {
+                0% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 0.5;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+        .coursethird {
+            opacity: 0;
+            animation: loadingdelay 1s ease 3s forwards;
+
+            @keyframes loadingdelay {
+                0% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 0.5;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+        .coursefirst, .coursesecond, .coursethird {
             display: flex;
             flex-direction: column;
             gap: 1em;
