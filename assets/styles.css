@@ -94,6 +94,11 @@ a {
 .searchandfind__title {
   padding: 0 0.5rem 0 0.5rem;
 }
+@media (min-width: 769px) {
+  .searchandfind__title {
+    font-size: 2.5em;
+  }
+}
 .searchandfind__text {
   font-weight: 300;
   font-size: 1.1rem;
@@ -125,7 +130,7 @@ a {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 0.9em;
-    padding: 2em 8em 2em 8em;
+    padding: 2em 9em 2em 8em;
   }
 }
 @media (min-width: 769px) {
@@ -136,10 +141,10 @@ a {
 .filters__card {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1em;
   font-weight: 500;
-  padding: 11px 0 11px 0;
-  margin: 0 0 1.5rem 0.9rem;
+  padding: 11px 10px 11px 0;
+  margin: 0 0 1.5em 0.9em;
   background-color: #F6F6F6;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
@@ -180,7 +185,7 @@ a {
 }
 .restaurants .restaurants-card {
   width: 100%;
-  height: 251px;
+  height: 255px;
   margin-top: 1em;
   background-color: #FFFFFF;
   border-radius: 15px;

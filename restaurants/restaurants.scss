@@ -51,13 +51,21 @@ body {
     main {
         position: relative;
         z-index: 2;
-        padding: 1.2em 1em 1.2em 1em;
+        padding: 1.2em 1em 2em 1em;
         background-color: #F6F6F6;
         border-radius: 25px 25px 0 0;
+
+        @media (min-width: 769px) {
+            margin: 0 8em 0 8em;
+        }
         .menu__title {
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            @media (min-width: 769px) {
+                justify-content: center;
+            }
             h1 {
                 font-size: 1.7em;
                 font-weight: 400;
@@ -135,16 +143,47 @@ body {
     footer {
         background-color: #353535;
         padding: 0.8rem 1.2rem 1rem 1.2rem;
+
+        @media (min-width: 769px) {
+            height: 100px;
+        }
         .infoslinks {
+
+            @media (min-width: 769px) {
+                display: flex;
+                position: relative;
+                justify-content: flex-end;
+                align-items: flex-end;
+                height: 100%;
+            }
             &__title {
                 color: #FFFFFF;
                 font-size: 1.1rem;
                 font-weight: 400;
+
+                @media (min-width: 769px) {
+                    position: absolute;
+                    margin: 0;
+                    top: 60px;
+                    right: 25px;
+                }
             }
             &__txt {
                 font-weight: 500;
+
+                @media (min-width: 769px) {
+                    margin-right: 1em;
+                }
                 & img {
                     margin-right: 10px;
+                }
+            }
+            &__links {
+
+                @media (min-width: 769px) {
+                    display: flex;
+                    margin: 0 12em 0 2em;
+                    gap: 1em;
                 }
             }
             & a {
