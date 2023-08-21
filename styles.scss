@@ -30,22 +30,21 @@ a {
     position: absolute;
     z-index: 2;
     background: #EAEAEA;
-    border-radius: 8%;
-    opacity: 0.9;
+    opacity: 1;
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: out 3s forwards;
-    transform-origin: right;
+    animation: out 3s ease-in-out forwards;
 
     @keyframes out {
         0% {
             transform:scale(1);
         }
         100% {
-            transform:scale(0);
+            opacity: 0;
+            display: none;
         }
     }
 
@@ -250,12 +249,13 @@ a {
             }
             &--like {
                 position: relative;
-                margin: 1.5rem;
+                margin: 1.5em;
                 .likeempty {
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-95%, -50%);
+                    font-size: 1.5em;
                     &:hover,
                     &:focus, 
                     &:active {
@@ -272,6 +272,7 @@ a {
                     background-clip: text;
                     -webkit-background-clip: text;
                     color: transparent;
+                    font-size: 1.5em;
                     &:hover, 
                     &:focus, 
                     &:active {
