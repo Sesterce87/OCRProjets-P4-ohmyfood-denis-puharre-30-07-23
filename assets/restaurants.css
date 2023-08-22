@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -48,13 +49,14 @@ body main {
 @media (min-width: 769px) {
   body main {
     margin: 0 8em 0 8em;
-    padding: 1.2em 6em 2em 6em;
+    padding: 1.2em 5em 2em 5em; /*** padding left et right à ajuster en fonction des débordements ***/
   }
 }
 body main .menu__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 @media (min-width: 769px) {
   body main .menu__title {
@@ -66,7 +68,30 @@ body main .menu__title h1 {
   font-weight: 400;
 }
 body main .menu__title i {
-  padding: 0 1em 0 1em;
+  padding: 0 0.5em 0 0.5em;
+}
+body main .menu__title .likeempty {
+  position: absolute;
+  top: 30px;
+  left: 295px;
+  font-size: 1.5em;
+}
+body main .menu__title .likeempty:hover, body main .menu__title .likeempty:active {
+  display: none;
+}
+body main .menu__title .likefull {
+  position: absolute;
+  opacity: 0;
+  top: 30px;
+  left: 295px;
+  background-image: linear-gradient(-2deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1.5em;
+}
+body main .menu__title .likefull:hover, body main .menu__title .likefull:active {
+  opacity: 1;
 }
 body main .coursefirst {
   opacity: 0;
@@ -145,10 +170,29 @@ body main .coursefirst .card, body main .coursesecond .card, body main .courseth
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
 }
+body main .coursefirst .card:hover .slidecheck, body main .coursesecond .card:hover .slidecheck, body main .coursethird .card:hover .slidecheck {
+  transform: translateX(0px);
+}
+body main .coursefirst .card:hover .card__price, body main .coursesecond .card:hover .card__price, body main .coursethird .card:hover .card__price {
+  right: 60px;
+}
+body main .coursefirst .card:hover .card__text, body main .coursesecond .card:hover .card__text, body main .coursethird .card:hover .card__text {
+  width: 230px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; /*** à supprimer vers 1024px, transi douce à faire ***/
+}
+body main .coursefirst .card:hover .card__title, body main .coursesecond .card:hover .card__title, body main .coursethird .card:hover .card__title {
+  width: 230px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; /*** à supprimer vers 1024px, transi douce à faire ***/
+}
 body main .coursefirst .card__title, body main .coursesecond .card__title, body main .coursethird .card__title {
   margin: 0.5em 0 0 0.5em;
   font-size: 1.1em;
   font-weight: 600;
+  white-space: nowrap;
 }
 body main .coursefirst .card__text, body main .coursesecond .card__text, body main .coursethird .card__text {
   margin: 0.4em 0 0.5em 0.5em;
@@ -156,12 +200,13 @@ body main .coursefirst .card__text, body main .coursesecond .card__text, body ma
   font-weight: 300;
 }
 body main .coursefirst .card__price, body main .coursesecond .card__price, body main .coursethird .card__price {
+  position: absolute;
+  top: 28px;
+  right: 5px;
   margin: 0.5em 0.6em 0.5em 0.6em;
   font-size: 0.9em;
   font-weight: 700;
-}
-body main .coursefirst .card__price:hover + .slidecheck, body main .coursesecond .card__price:hover + .slidecheck, body main .coursethird .card__price:hover + .slidecheck {
-  transform: translateX(0px);
+  transition: right 0.3s ease-in-out;
 }
 body main .coursefirst .card .slidecheck, body main .coursesecond .card .slidecheck, body main .coursethird .card .slidecheck {
   display: flex;
@@ -172,7 +217,7 @@ body main .coursefirst .card .slidecheck, body main .coursesecond .card .slidech
   height: 61px;
   border-radius: 0 15px 15px 0;
   transform: translateX(61px);
-  transition: transform 0.1s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 body main .coursefirst .card .slidecheck i, body main .coursesecond .card .slidecheck i, body main .coursethird .card .slidecheck i {
   padding: 0.2em;
