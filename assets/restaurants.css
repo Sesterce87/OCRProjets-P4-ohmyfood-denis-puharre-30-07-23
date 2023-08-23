@@ -58,7 +58,7 @@ body main .menu__title {
   align-items: center;
   position: relative;
 }
-@media (min-width: 769px) {
+@media (min-width: 1440px) {
   body main .menu__title {
     justify-content: center;
   }
@@ -73,17 +73,22 @@ body main .menu__title i {
 body main .menu__title .likeempty {
   position: absolute;
   top: 30px;
-  left: 295px;
+  right: 10px;
   font-size: 1.5em;
 }
 body main .menu__title .likeempty:hover, body main .menu__title .likeempty:active {
   display: none;
 }
+@media (min-width: 1440px) {
+  body main .menu__title .likeempty {
+    right: 330px;
+  }
+}
 body main .menu__title .likefull {
   position: absolute;
-  opacity: 0;
   top: 30px;
-  left: 295px;
+  right: 10px;
+  opacity: 0;
   background-image: linear-gradient(-2deg, #9356DC -11.44%, #FF79DA 123.93%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -92,6 +97,11 @@ body main .menu__title .likefull {
 }
 body main .menu__title .likefull:hover, body main .menu__title .likefull:active {
   opacity: 1;
+}
+@media (min-width: 1440px) {
+  body main .menu__title .likefull {
+    right: 330px;
+  }
 }
 body main .coursefirst {
   opacity: 0;
@@ -176,17 +186,21 @@ body main .coursefirst .card:hover .slidecheck, body main .coursesecond .card:ho
 body main .coursefirst .card:hover .card__price, body main .coursesecond .card:hover .card__price, body main .coursethird .card:hover .card__price {
   right: 60px;
 }
-body main .coursefirst .card:hover .card__text, body main .coursesecond .card:hover .card__text, body main .coursethird .card:hover .card__text {
-  width: 230px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis; /*** à supprimer vers 1024px, transi douce à faire ***/
+@media (max-width: 1023px) {
+  body main .coursefirst .card:hover .card__text, body main .coursesecond .card:hover .card__text, body main .coursethird .card:hover .card__text {
+    width: 230px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }
-body main .coursefirst .card:hover .card__title, body main .coursesecond .card:hover .card__title, body main .coursethird .card:hover .card__title {
-  width: 230px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis; /*** à supprimer vers 1024px, transi douce à faire ***/
+@media (max-width: 1023px) {
+  body main .coursefirst .card:hover .card__title, body main .coursesecond .card:hover .card__title, body main .coursethird .card:hover .card__title {
+    width: 230px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }
 body main .coursefirst .card__title, body main .coursesecond .card__title, body main .coursethird .card__title {
   margin: 0.5em 0 0 0.5em;
