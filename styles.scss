@@ -162,6 +162,10 @@ a {
         background-color: #F6F6F6;
         border-radius: 20px;
         box-shadow: 0px 4px 15px 0px #00000026;
+        cursor: pointer;
+        &:hover &--img {
+            color: $primary-color;
+        }
         &--number {
             text-align: center;
             transform: translate(-13px);
@@ -171,7 +175,8 @@ a {
             border-radius: 100%;
         }
         &--img {
-            margin-bottom: 8px;
+            color: #7E7E7E;
+            font-size: 1.1em;
         }
     }
 }
@@ -257,11 +262,6 @@ a {
                     left: 50%;
                     transform: translate(-95%, -50%);
                     font-size: 1.5em;
-                    &:hover,
-                    &:focus, 
-                    &:active {
-                        display: none;
-                    }
                 }
                 .likefull {
                     position: absolute;
@@ -274,6 +274,7 @@ a {
                     -webkit-background-clip: text;
                     color: transparent;
                     font-size: 1.5em;
+                    transition: all 1s ease-in-out;
                     &:hover, 
                     &:focus, 
                     &:active {
